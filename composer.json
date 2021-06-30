@@ -1,0 +1,21 @@
+{
+    "name": "chipslays/vk-music",
+    "description": "A simple wrapper for VK Music API.",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "chipslays/collection": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Chipslays\\VkMusic\\": "src/"
+        },
+        "files": ["helpers.php"]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}
