@@ -45,13 +45,43 @@ print_r($response->get('items.0.artist'));
 
 > **NOTICE:** Optional parameter `$extra` is a array of parameters with `key => value`.
 
-#### `search(string $q, int $offset = 0, int $count = 10, array $extra = []): Collection`
+#### `search(string $q, int $count = 10, int $offset = 0, array $extra = []): Collection`
+```php
+$client->search('Justin Bieber - Baby');
+```
+
 #### `getById(string|array $audios): Collection`
-#### `get($owner_id, int $offset = 0, int $count = 10, $extra = []): Collection`
+```php
+$client->getById(['371745461_456289486', '-41489995_202246189']);
+```
+
+#### `get($owner_id, int $count = 10, int $offset = 0, $extra = []): Collection`
+```php
+$client->get('371745461');
+```
+
 #### `getPlaylists($owner_id, int $count = 10): Collection`
+```php
+$client->getPlaylists('371745461');
+```
+
 #### `getRecommendations(int $count = 10): Collection`
+```php
+$client->getRecommendations();
+```
+
 #### `getPopular(int $count = 10): Collection`
+```php
+$client->getPopular();
+```
+
 #### `method(string $method, array $params): Collection`
+```php
+$client->method('audio.search', [
+    'q' => 'Justin Bieber - Baby',
+    'count' => '10',
+]);
+```
 
 ## Helpers
 
