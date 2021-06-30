@@ -13,7 +13,7 @@ trait Methods
      * @param array $extra
      * @return Collection
      */
-    public function search(string $q, int $offset = 0, int $count = 10, array $extra = []): Collection
+    public function search(string $q, int $count = 10, int $offset = 0, array $extra = []): Collection
     {
         $predefined = [
             'sort' => 2,
@@ -44,7 +44,7 @@ trait Methods
      * @param array $extra
      * @return Collection
      */
-    public function get($owner_id, int $offset = 0, int $count = 10, $extra = []): Collection
+    public function get($owner_id, int $count = 10, int $offset = 0, $extra = []): Collection
     {
         $params = array_merge(compact('owner_id', 'offset', 'count'), $extra);
 
