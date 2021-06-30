@@ -1,4 +1,4 @@
-# VK Music API for PHP
+# 🎵 VK Music API for PHP
 
 A simple wrapper for VK Music API.
 
@@ -51,7 +51,7 @@ print_r($response->get('items.0.artist'));
 #### `getPlaylists($owner_id, int $count = 10): Collection`
 #### `getRecommendations(int $count = 10): Collection`
 #### `getPopular(int $count = 10): Collection`
-#### `method(string $method, array $params)`
+#### `method(string $method, array $params): Collection`
 
 ## Helpers
 
